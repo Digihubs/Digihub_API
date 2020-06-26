@@ -9,13 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AD966A03-0A89-4748-834B-221A6AC8636C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.Domain", "DigiHub.Domain\DigiHub.Domain.csproj", "{25A97AD8-7F3F-4B8C-B9ED-F7ECCD8246A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Domain", "DigiHub.Domain\DigiHub.Domain.csproj", "{25A97AD8-7F3F-4B8C-B9ED-F7ECCD8246A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.Application", "DigiHub.Application\DigiHub.Application.csproj", "{4C1E4DDA-8321-49C7-A543-AB328A0D74C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Application", "DigiHub.Application\DigiHub.Application.csproj", "{4C1E4DDA-8321-49C7-A543-AB328A0D74C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.Persistence", "DigiHub.Persistence\DigiHub.Persistence.csproj", "{C8037339-F856-4E77-AD0F-7029A4C57DF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Persistence", "DigiHub.Persistence\DigiHub.Persistence.csproj", "{C8037339-F856-4E77-AD0F-7029A4C57DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.WebAPI", "DigiHub.WebAPI\DigiHub.WebAPI.csproj", "{DB547B77-CD95-418E-A896-0E74A3223AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.WebAPI", "DigiHub.WebAPI\DigiHub.WebAPI.csproj", "{DB547B77-CD95-418E-A896-0E74A3223AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.Infrastructure", "DigiHub.Infrastructure\DigiHub.Infrastructure.csproj", "{403043B3-DCAA-427F-91C1-3FB4E676D260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DB547B77-CD95-418E-A896-0E74A3223AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB547B77-CD95-418E-A896-0E74A3223AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB547B77-CD95-418E-A896-0E74A3223AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403043B3-DCAA-427F-91C1-3FB4E676D260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403043B3-DCAA-427F-91C1-3FB4E676D260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403043B3-DCAA-427F-91C1-3FB4E676D260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403043B3-DCAA-427F-91C1-3FB4E676D260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{4C1E4DDA-8321-49C7-A543-AB328A0D74C5} = {25716203-EF40-49B0-AC63-8E365657D04B}
 		{C8037339-F856-4E77-AD0F-7029A4C57DF5} = {5D8CB7DA-AA71-4A5D-9B7E-CC818331EC60}
 		{DB547B77-CD95-418E-A896-0E74A3223AE2} = {AD966A03-0A89-4748-834B-221A6AC8636C}
+		{403043B3-DCAA-427F-91C1-3FB4E676D260} = {5D8CB7DA-AA71-4A5D-9B7E-CC818331EC60}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01A1AFA1-DE4B-4FAF-B4C5-9168A0674242}
