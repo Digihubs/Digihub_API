@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DigiHub.Domain.Common
 {
-    class AuditableEntity
+    public class AuditableEntity
     {
         public string CreatedBy { get; set; }
 
