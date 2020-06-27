@@ -5,14 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="FluentValidation" Version="8.6.2" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DigiHub.Domain\DigiHub.Domain.csproj" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Common\Interfaces\" />
   </ItemGroup>
 
 </Project>
