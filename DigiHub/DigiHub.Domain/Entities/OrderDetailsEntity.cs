@@ -7,14 +7,12 @@ namespace DigiHub.Domain.Entities
     {
         public OrderDetailsEntity()
         {
-            OrdersEntity = new OrdersEntity();
-            CategoryWiseServiceEntity = new CategoryWiseServiceEntity();
         }
 
         public Guid OrderDetailsId { get; set; }
         public string OrderId { get; set; }
-        public OrdersEntity OrdersEntity { get; private set; }
+        public OrdersEntity OrdersEntity { get; set; }
         public ushort ServiceId { get; set; }
-        public CategoryWiseServiceEntity CategoryWiseServiceEntity { get; private set; }
+        public CategoryWiseServiceEntity CategoryWiseServiceEntity { get; set; }
     }
 }
