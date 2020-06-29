@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DigiHub.Persistence
 {
-    class ApplicationDBContextSeed
+    class DigiHubDBContextSeed
     {
     }
 }

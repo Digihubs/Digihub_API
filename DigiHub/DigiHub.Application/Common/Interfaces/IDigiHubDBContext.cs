@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using DigiHub.Domain;
 
-namespace DigiHub.Persistence
+namespace DigiHub.Application.Common.Interfaces
 {
-    class ApplicationDBContext : DbContext
+    public interface IDigiHubDBContext
     {
+       
     }
 }
