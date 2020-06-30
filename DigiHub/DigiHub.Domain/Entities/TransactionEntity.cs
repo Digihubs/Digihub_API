@@ -7,12 +7,12 @@ namespace DigiHub.Domain.Entities
     {
         public TransactionEntity()
         {
-            OrdersEntity = new OrdersEntity();
+
         }
 
         public Guid TransactionId { get; set; }
         public string OrderId { get; set; }
-        public OrdersEntity OrdersEntity { get; private set; }
+        public OrdersEntity OrdersEntity { get; set; }
         public double NetAmount { get; set; }
         public double DiscountAmount { get; set; }
         public double GrossAmount { get; set; }
