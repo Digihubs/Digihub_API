@@ -42,7 +42,7 @@ namespace DigiHub.Application.Categories.Commands.CreateCategory
 
             await _context.SaveChangesAsync(cancellationToken);
 
-            return entity.CategoryId;
+            return entity.Id;
         }
     }
 }

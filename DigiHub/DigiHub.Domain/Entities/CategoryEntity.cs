@@ -5,7 +5,7 @@ namespace DigiHub.Domain.Entities
 {
     public class CategoryEntity : AuditableEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string CategoryName { get; set; }
         public ushort ParentId { get; set; }
         public string Icon { get; set; }
