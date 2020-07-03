@@ -1,10 +1,11 @@
 ﻿using DigiHub.Domain.Common;
+using System;
 
 namespace DigiHub.Domain.Entities
 {
     public class CategoryEntity : AuditableEntity
     {
-        public ushort CategoryId { get; set; }
+        public Guid Id { get; set; }
         public string CategoryName { get; set; }
         public ushort ParentId { get; set; }
         public string Icon { get; set; }

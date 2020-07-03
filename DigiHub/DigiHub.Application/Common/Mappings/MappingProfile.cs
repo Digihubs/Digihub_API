@@ -5,11 +5,16 @@ using System.Reflection;
 
 namespace DigiHub.Application.Common.Mappings
 {
-    public class MappingProfile : Profile
+    public class MappingProfile : Profile, IMapFrom<Profile>
     {
         public MappingProfile()
         {
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap(typeof(Profile), GetType());
         }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)
