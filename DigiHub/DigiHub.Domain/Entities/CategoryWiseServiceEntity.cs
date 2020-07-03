@@ -1,4 +1,6 @@
 ﻿using DigiHub.Domain.Common;
+using System;
+using System.Collections.Generic;
 
 namespace DigiHub.Domain.Entities
 {
@@ -6,15 +8,14 @@ namespace DigiHub.Domain.Entities
     {
         public CategoryWiseServiceEntity()
         {
-            CategoryEntity = new CategoryEntity();
-            ServiceEntity = new ServiceEntity();
+            CommissionEntities = new HashSet<CommissionEntity>();
         }
-
-        public int CategoryWiseServiceId { get; set; }
-        public byte CategoryId { get; set; }
-        public CategoryEntity CategoryEntity { get; private set; }
-        public ushort ServiceId { get; set; }
-        public ServiceEntity ServiceEntity { get; private set; }
+        public Guid Id { get; set; }
+        public string CategoryId { get; set; }
+        public CategoryEntity CategoryEntity { get; set; }
+        public string ServiceId { get; set; }
+        public ServiceEntity ServiceEntity { get; set; }
         public double ServicePrice { get; set; }
+        public ICollection<CommissionEntity> CommissionEntities { get; private set; }
     }
 }
