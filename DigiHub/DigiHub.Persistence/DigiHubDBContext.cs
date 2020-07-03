@@ -1,27 +1,25 @@
-﻿using DigiHub.Domain.Entities;
+﻿using DigiHub.Application.Common.Interfaces;
+using DigiHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DigiHub.Persistence
 {
-    public class DigiHubDBContext : DbContext
+    class DigiHubDBContext : DbContext, IDigiHubDBContext
     {
-        public DigiHubDBContext()
+        public DigiHubDBContext(DbContextOptions<DigiHubDBContext> options)
+        : base(options)
         {
-
         }
-
-        public DbSet<CategoryEntity> CategoryEntities { get; set; }
-        public DbSet<ServiceEntity> ServiceEntities { get; set; }
-        public DbSet<CategoryWiseServiceEntity> WiseServiceEntities { get; set; }
-        public DbSet<AddressEntity> AddressEntities { get; set; }
-        public DbSet<ProvidersEntity> ProvidersEntities { get; set; }
-        public DbSet<ClientEntity> ClientEntities { get; set; }
-        public DbSet<OrdersEntity> OrdersEntities { get; set; }
-        public DbSet<OrderDetailsEntity> OrderDetailsEntities { get; set; }
-        public DbSet<TransactionEntity> TransactionEntities { get; set; }
-        public DbSet<AssignProversToServiceEntity> AssignProversToServiceEntities { get; set; }
-        public DbSet<OfferEntity> OfferEntities { get; set; }
-        public CommissionEntity CommissionEntity { get; set; }
-        public DbSet<ValuesEntity> ValuesEntities { get; set; }
+        public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<AddressEntity> Addresses { get; set; }
+        public DbSet<CategoryWiseServiceEntity> CategoryWiseServices { get; set; }
+        public DbSet<ClientEntity> Clients { get; set; }
+        public DbSet<CommissionEntity> Commissions { get; set; }
+        public DbSet<OfferEntity> Offers { get; set; }
+        public DbSet<OrdersEntity> Orders { get; set; }
+        public DbSet<OrderDetailsEntity> OrderDetails { get; set; }
+        public DbSet<ProvidersEntity> Providers { get; set; }
+        public DbSet<ServiceEntity> Services { get; set; }
+        public DbSet<TransactionEntity> Transactions { get; set; }
     }
 }
