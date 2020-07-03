@@ -5,10 +5,10 @@ namespace DigiHub.Domain.Entities
 {
     public class AssignProversToServiceEntity : AuditableEntity
     {
-        public Int64 AssignId { get; set; }
-        public int ProviderId { get; set; }
+        public Guid Id { get; set; }
+        public string ProviderId { get; set; }
         public ProvidersEntity ProvidersEntity { get; set; }
-        public Int64 OrderId { get; set; }
+        public string OrderId { get; set; }
         public OrdersEntity OrdersEntity { get; set; }
         public DateTime AssignedDateTime { get; set; }
     }

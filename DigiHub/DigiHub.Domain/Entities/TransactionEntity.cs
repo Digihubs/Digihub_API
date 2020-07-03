@@ -5,12 +5,7 @@ namespace DigiHub.Domain.Entities
 {
     public class TransactionEntity : AuditableEntity
     {
-        public TransactionEntity()
-        {
-
-        }
-
-        public Guid TransactionId { get; set; }
+        public Guid Id { get; set; }
         public string OrderId { get; set; }
         public OrdersEntity OrdersEntity { get; set; }
         public double NetAmount { get; set; }

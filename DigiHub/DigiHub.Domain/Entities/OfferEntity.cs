@@ -5,7 +5,7 @@ namespace DigiHub.Domain.Entities
 {
     public class OfferEntity : AuditableEntity
     {
-        public int OfferId { get; set; }
+        public Guid Id { get; set; }
         public string OfferName { get; set; }
         public ushort OfferType { get; set; }
         public decimal OfferDiscount { get; set; }
