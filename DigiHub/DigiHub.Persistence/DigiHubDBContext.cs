@@ -1,5 +1,6 @@
 ﻿using DigiHub.Application.Common.Interfaces;
 using DigiHub.Domain.Entities;
+using DigiHub.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -25,5 +26,13 @@ namespace DigiHub.Persistence
         public DbSet<ProvidersEntity> Providers { get; set; }
         public DbSet<ServiceEntity> Services { get; set; }
         public DbSet<TransactionEntity> Transactions { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.ApplyConfiguration(new CategoryEntityConfiguration());
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
