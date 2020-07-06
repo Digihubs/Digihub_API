@@ -26,12 +26,9 @@ namespace DigiHub.Persistence
         public DbSet<ProvidersEntity> Providers { get; set; }
         public DbSet<ServiceEntity> Services { get; set; }
         public DbSet<TransactionEntity> Transactions { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ApplyConfiguration(new CategoryEntityConfiguration());
-
             base.OnModelCreating(modelBuilder);
         }
     }
