@@ -1,10 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DigiHub.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DigiHub.Persistence.Configurations
 {
-    class CommissionEntityConfiguration
+    public class CommissionEntityConfiguration : IEntityTypeConfiguration<CommissionEntity>
     {
+        public void Configure(EntityTypeBuilder<CommissionEntity> builder)
+        {
+            builder.ToTable("Commission");
+
+            builder
+                .HasOne(cws => cws.CategoryWiseServiceEntity)
+                .WithMany(c => c.CommissionEntities)
+                .HasForeignKey(cws => cws.ServiceId);
+        }
     }
 }

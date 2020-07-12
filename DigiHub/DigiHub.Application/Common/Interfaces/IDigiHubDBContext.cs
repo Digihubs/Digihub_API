@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using DigiHub.Domain.Entities;
+﻿using DigiHub.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -7,17 +7,19 @@ namespace DigiHub.Application.Common.Interfaces
 {
     public interface IDigiHubDBContext
     {
-        DbSet<CategoryEntity> Categories { get; set; }
-        DbSet<AddressEntity> Addresses { get; set; }
-        DbSet<CategoryWiseServiceEntity> CategoryWiseServices { get; set; }
-        DbSet<ClientEntity> Clients { get; set; }
-        DbSet<CommissionEntity> Commissions { get; set; }
-        DbSet<OfferEntity> Offers { get; set; }
-        DbSet<OrdersEntity> Orders { get; set; }
-        DbSet<OrderDetailsEntity> OrderDetails { get; set; }
-        DbSet<ProvidersEntity> Providers { get; set; }
-        DbSet<ServiceEntity> Services { get; set; }
-        DbSet<TransactionEntity> Transactions { get; set; }
+        DbSet<CategoryEntity> CategoryEntities { get; set; }
+        DbSet<ServiceEntity> ServiceEntities { get; set; }
+        DbSet<CategoryWiseServiceEntity> CategoryWiseServiceEntities { get; set; }
+        DbSet<AddressEntity> AddressEntities { get; set; }
+        DbSet<ProvidersEntity> ProvidersEntities { get; set; }
+        DbSet<ClientEntity> ClientEntities { get; set; }
+        DbSet<OrdersEntity> OrdersEntities { get; set; }
+        DbSet<OrderDetailsEntity> OrderDetailsEntities { get; set; }
+        DbSet<AssignProvidersToOrderEntity> AssignProvidersToOrderEntities { get; set; }
+        DbSet<TransactionEntity> TransactionEntities { get; set; }
+        DbSet<OfferEntity> OfferEntities { get; set; }
+        DbSet<CommissionEntity> CommissionEntities { get; set; }
+        DbSet<ValuesEntity> ValuesEntities { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

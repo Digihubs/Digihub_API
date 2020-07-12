@@ -1,9 +1,6 @@
 ﻿using DigiHub.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DigiHub.Persistence.Configurations
 {
@@ -12,7 +9,7 @@ namespace DigiHub.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<CategoryEntity> builder)
         {
-
+            builder.ToTable("Category");
         }
     }
 }

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DigiHub.Persistence.Configurations
 {
-    public class AddressEntityConfiguration : IEntityTypeConfiguration<AddressEntity>
+    public class ValuesEntityConfiguration : IEntityTypeConfiguration<ValuesEntity>
     {
-        public void Configure(EntityTypeBuilder<AddressEntity> builder)
+        public void Configure(EntityTypeBuilder<ValuesEntity> builder)
         {
-            builder.ToTable("Address");
+            builder.ToTable("Values");
         }
     }
 }
