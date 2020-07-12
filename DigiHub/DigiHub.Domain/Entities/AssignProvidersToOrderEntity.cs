@@ -3,12 +3,12 @@ using System;
 
 namespace DigiHub.Domain.Entities
 {
-    public class AssignProversToServiceEntity : AuditableEntity
+    public class AssignProvidersToOrderEntity : AuditableEntity
     {
-        public Guid Id { get; set; }
-        public string ProviderId { get; set; }
+        public int Id { get; set; }
+        public int ProviderId { get; set; }
         public ProvidersEntity ProvidersEntity { get; set; }
-        public string OrderId { get; set; }
+        public int OrderId { get; set; }
         public OrdersEntity OrdersEntity { get; set; }
         public DateTime AssignedDateTime { get; set; }
     }

@@ -1,5 +1,4 @@
 ﻿using DigiHub.Domain.Common;
-using System;
 using System.Collections.Generic;
 
 namespace DigiHub.Domain.Entities
@@ -8,19 +7,21 @@ namespace DigiHub.Domain.Entities
     {
         public OrdersEntity()
         {
-            OrderDetailsEntity = new HashSet<OrderDetailsEntity>();
+            OrderDetailsEntities = new HashSet<OrderDetailsEntity>();
+            AssignProvidersToOrderEntities = new HashSet<AssignProvidersToOrderEntity>();
             TransactionEntities = new HashSet<TransactionEntity>();
-            AssignProversToServiceEntities = new HashSet<AssignProversToServiceEntity>();
         }
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string OrderNumber { get; set; }
-        public string ClientId { get; set; }
+        public int ClientId { get; set; }
         public ClientEntity ClientEntity { get; set; }
-        public ushort Status { get; set; }
+        public double NetAmount { get; set; }
         public double Discount { get; set; }
-        public ICollection<OrderDetailsEntity> OrderDetailsEntity { get; private set; }
+        public double GrossAmount { get; set; }
+        public ushort Status { get; set; }
+        public ICollection<OrderDetailsEntity> OrderDetailsEntities { get; private set; }
+        public ICollection<AssignProvidersToOrderEntity> AssignProvidersToOrderEntities { get; private set; }
         public ICollection<TransactionEntity> TransactionEntities { get; private set; }
-        public ICollection<AssignProversToServiceEntity> AssignProversToServiceEntities { get; private set; }
 
     }
 }
