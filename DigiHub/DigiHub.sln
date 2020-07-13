@@ -1,13 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{25716203-EF40-49B0-AC63-8E365657D04B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5D8CB7DA-AA71-4A5D-9B7E-CC818331EC60}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AD966A03-0A89-4748-834B-221A6AC8636C}"
+	ProjectSection(SolutionItems) = preProject
+		Test.cs = Test.cs
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Domain", "DigiHub.Domain\DigiHub.Domain.csproj", "{25A97AD8-7F3F-4B8C-B9ED-F7ECCD8246A8}"
 EndProject
@@ -17,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Persistence", "Digi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.WebAPI", "DigiHub.WebAPI\DigiHub.WebAPI.csproj", "{DB547B77-CD95-418E-A896-0E74A3223AE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiHub.Infrastructure", "DigiHub.Infrastructure\DigiHub.Infrastructure.csproj", "{403043B3-DCAA-427F-91C1-3FB4E676D260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiHub.Infrastructure", "DigiHub.Infrastructure\DigiHub.Infrastructure.csproj", "{403043B3-DCAA-427F-91C1-3FB4E676D260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
