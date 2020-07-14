@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DigiHub.Application.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommand : IRequest<int>
+    public class CreateCategoryCommand : IRequest<Guid>
     {
         public string CategoryName { get; set; }
         public ushort ParentId { get; set; }
@@ -18,7 +18,7 @@ namespace DigiHub.Application.Categories.Commands.CreateCategory
         public string Thumbnail { get; set; }
     }
 
-    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, int>
+    public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, Guid>
     {
         private IDigiHubDBContext _context { get; }
         public CreateCategoryCommandHandler(IDigiHubDBContext context)
@@ -27,7 +27,7 @@ namespace DigiHub.Application.Categories.Commands.CreateCategory
         }
 
 
-        public async Task<int> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
             var entity = new CategoryEntity
             {
