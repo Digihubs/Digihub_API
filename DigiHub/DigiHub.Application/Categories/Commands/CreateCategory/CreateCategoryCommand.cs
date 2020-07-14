@@ -1,9 +1,6 @@
 ﻿using DigiHub.Application.Common.Interfaces;
 using DigiHub.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -38,7 +35,7 @@ namespace DigiHub.Application.Categories.Commands.CreateCategory
                 Thumbnail = request.Thumbnail
             };
 
-            _context.Categories.Add(entity);
+            _context.CategoryEntities.Add(entity);
 
             await _context.SaveChangesAsync(cancellationToken);
 

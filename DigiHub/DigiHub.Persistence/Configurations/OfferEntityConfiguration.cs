@@ -4,12 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DigiHub.Persistence.Configurations
 {
-
-    public class CategoryEntityConfiguration : IEntityTypeConfiguration<CategoryEntity>
+    public class OfferEntityConfiguration : IEntityTypeConfiguration<OfferEntity>
     {
-        public void Configure(EntityTypeBuilder<CategoryEntity> builder)
+        public void Configure(EntityTypeBuilder<OfferEntity> builder)
         {
-            builder.ToTable("Category");
+            builder.ToTable("Offer");
         }
     }
 }

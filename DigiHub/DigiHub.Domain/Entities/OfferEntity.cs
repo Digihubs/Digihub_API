@@ -5,13 +5,14 @@ namespace DigiHub.Domain.Entities
 {
     public class OfferEntity : AuditableEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string OfferName { get; set; }
-        public ushort OfferType { get; set; }
-        public decimal OfferDiscount { get; set; }
-        public decimal OfferDescription { get; set; }
-        public DateTime StartDateTime { get; set; }
-        public DateTime ExpiredDateTime { get; set; }
-        public byte MaximumUses { get; set; }
+        public string OfferCode { get; set; }
+        public string OfferType { get; set; }
+        public double OfferDiscount { get; set; }
+        public string OfferDescription { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public bool IsActive { get; set; }
     }
 }
